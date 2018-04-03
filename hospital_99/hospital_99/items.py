@@ -10,6 +10,7 @@ import scrapy
 
 class Hospital99Item(scrapy.Item):
     # define the fields for your item here like:
+    # name = scrapy.Field()
     PROVINCE = scrapy.Field()
     CITY = scrapy.Field()
     DISTRICT = scrapy.Field()
@@ -23,4 +24,3 @@ class Hospital99Item(scrapy.Item):
     TEL = scrapy.Field()
     RATE = scrapy.Field()
     NATURE = scrapy.Field()
-

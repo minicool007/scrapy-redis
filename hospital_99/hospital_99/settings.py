@@ -27,7 +27,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 1
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -67,8 +67,8 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'hospital_99.pipelines.Hospital99Pipeline': 300,
-    'scrapy_redis.pipelines.RedisPipeline': 400,
+   'hospital_99.pipelines.Hospital99Pipeline': 300,
+   'scrapy_redis.pipelines.RedisPipeline': 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -92,25 +92,18 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-# start redis database configure setting
 REDIS_URL = 'redis://localhost:6379'
 REDIS_HOST = 'localhost' # 也可以根据情况改成 localhost
 REDIS_PORT = 6379
-# end of redis database configure setting
 
-# start MySQL database configure setting
 MYSQL_HOST = 'localhost'
 MYSQL_DBNAME = 'dbtest'
 MYSQL_USER = 'root'
 MYSQL_PASSWD = '123456'
-# end of MySQL database configure setting
 
 # 设置用户代理池
 UPPOOL = [
-
    "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2"
-
    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36",
-
    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393"
 ]
